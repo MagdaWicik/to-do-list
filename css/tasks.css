@@ -1,0 +1,48 @@
+.tasks {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    margin-top: 2px;
+    list-style-type: none;
+}
+
+.tasks__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 10px;
+}
+
+.tasks__content--done {
+    text-decoration: line-through;
+}
+
+.tasks__buttonDone {
+    background-color: rgb(42, 165, 20);
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+.tasks__buttonDone:hover {
+    border: 1px solid rgb(33, 33, 33);
+}
+
+.tasks__buttonDone:active {
+    border: 2px solid rgb(33, 33, 33);
+}
+
+.tasks__buttonRemove {
+    background-color: rgb(227, 71, 36);
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+.tasks__buttonRemove:hover {
+    border: 1px solid rgb(33, 33, 33);
+}
+
+.tasks__buttonRemove:active {
+    border: 2px solid rgb(33, 33, 33);
+}
