@@ -12,3 +12,7 @@ html {
     margin: auto;
     font-family: arial;
 }
+
+.header {
+    padding-top: 20px;
+}
