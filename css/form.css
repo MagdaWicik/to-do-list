@@ -1,0 +1,19 @@
+.form {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+}
+
+.form__newTask {
+    padding: 10px;
+    width: 600px;
+    margin-right: 20px;
+    outline-color: rgb(215, 215, 215);
+}
+
+.form__button {
+    padding: 10px;
+    background-color: rgb(26, 132, 132);
+    color: rgb(248, 241, 241);
+    border: none;
+}
+
