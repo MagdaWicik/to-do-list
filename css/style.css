@@ -5,3 +5,10 @@ html {
 *, ::after, ::before {
     box-sizing: inherit;
 }
+
+.body {
+    max-width: 1000px;
+    background-color: rgb(240, 240, 240);
+    margin: auto;
+    font-family: arial;
+}
