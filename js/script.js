@@ -1,14 +1,5 @@
 {
-    const tasks = [
-        {
-            content: "wykonać pracę domową",
-            done: false,
-        },
-        {
-            content: "opłacić rachunki",
-            done: true,
-        },
-    ];
+    const tasks = [];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -19,7 +10,7 @@
     };
 
     const removeTask = (taskIndex) => {
-        tasks.splice (taskIndex, 1);
+        tasks.splice(taskIndex, 1);
         render();
     };
 
@@ -51,12 +42,13 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li 
-            ${task.done ? "style=\"text-decoration: line-through\"" : ""}
-            >
-            <button class="js-done">zrobione?</button>
-            <button class="js-remove">usuń</button>
-            ${task.content}
+            <li class="tasks__item">
+            <button class="tasks__buttonDone js-done"> ${task.done ? "✔" : ""}</button>
+            <span class="tasks__content
+              ${task.done ? " tasks__content--done" : ""}">
+              ${task.content}
+            </span>
+            <button class="tasks__buttonRemove js-remove">🗑</button>
             </li>
             `;
         }
@@ -65,7 +57,7 @@
 
         bindEvents();
     };
-    
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
