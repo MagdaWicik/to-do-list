@@ -26,6 +26,15 @@
         render();
     };
 
+    const toggleButtonHide = () => {
+        const buttonHide = document.querySelector(".js-buttonHide");
+        const themeName = document.querySelector(".themeName");
+
+        buttonHide.classList.toggle("buttonShow");
+
+        themeName.innerText = buttonHide.classList.contains("buttonShow") ? "Ukryj" : "Pokaż";
+    }
+
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -42,6 +51,10 @@
                 toggleTaskDone(index);
             });
         });
+
+        const buttonHide = document.querySelector(".js-buttonHide");
+
+        buttonHide.addEventListener("click", toggleButtonHide);
     };
 
     const render = () => {
