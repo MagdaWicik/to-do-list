@@ -26,14 +26,22 @@
         render();
     };
 
+    const toggleAllTasksDone = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true
+        }));
+        render();
+    };
+
     const toggleButtonHide = () => {
         const buttonHide = document.querySelector(".js-buttonHide");
         const themeName = document.querySelector(".themeName");
 
         buttonHide.classList.toggle("buttonShow");
 
-        themeName.innerText = buttonHide.classList.contains("buttonShow") ? "Ukryj" : "Pokaż";
-    }
+        themeName.innerText = buttonHide.classList.contains("buttonShow") ? "Pokaż" : "Ukryj";
+    };
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -52,6 +60,14 @@
             });
         });
 
+        const toggleDoneAllButtons = document.querySelectorAll(".js-buttonAllTaskDone");
+
+        toggleDoneAllButtons.forEach((toggleDoneEveryButton) => {
+            toggleDoneEveryButton.addEventListener("click", () => {
+                toggleAllTasksDone();
+            });
+        });
+
         const buttonHide = document.querySelector(".js-buttonHide");
 
         buttonHide.addEventListener("click", toggleButtonHide);
@@ -65,7 +81,7 @@
             <li class="tasks__item">
             <button class="tasks__buttonDone js-done"> ${task.done ? "✔" : ""}</button>
             <span class="tasks__content
-              ${task.done ? " tasks__content--done" : ""}">
+              ${task.done ? "tasks__content--done" : ""}">
               ${task.content}
             </span>
             <button class="tasks__buttonRemove js-remove">🗑</button>
