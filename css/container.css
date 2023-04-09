@@ -16,3 +16,16 @@
 .container__header {
     flex-grow: 1;
 }
+
+@media(max-width: 767px) {
+    .container {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 767px) {
+    .container__button {
+        flex-basis: 100%;
+        margin: 10px;
+    }
+}
