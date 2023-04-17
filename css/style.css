@@ -10,7 +10,7 @@ html {
     max-width: 800px;
     background-color: rgb(240, 240, 240);
     margin: auto;
-    font-family: arial;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header {
