@@ -11,42 +11,46 @@
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
 .tasks__content--done {
     text-decoration: line-through;
 }
 
-.tasks__buttonDone {
-    background-color: rgb(42, 165, 20);
+.tasks__button {
     border: none;
+    color: white;
     width: 30px;
     height: 30px;
-    transition: 1s;
+    padding: 0;
+    transition: background 0.3s;
 }
 
-.tasks__buttonDone:hover {
-    border: 1px solid rgb(33, 33, 33);
-    background-color:rgb(60, 202, 35);
+.tasks__button--toggleDone {
+    background: hsl(120, 61%, 34%)
 }
 
-.tasks__buttonDone:active {
-    border: 2px solid rgb(33, 33, 33);
+.tasks__button--toggleDone:hover {
+    background: hsl(120, 61%, 39%)
 }
 
-.tasks__buttonRemove {
-    background-color: rgb(227, 71, 36);
-    border: none;
-    width: 30px;
-    height: 30px;
-    transition: 1s;
+.tasks__button--toggleDone:active {
+    background: hsl(120, 61%, 44%)
 }
 
-.tasks__buttonRemove:hover {
-    border: 1px solid rgb(33, 33, 33);
-    background-color:rgb(249, 93, 58);
+.tasks__button--remove {
+    background: hsl(348, 83%, 47%);
 }
 
-.tasks__buttonRemove:active {
-    border: 2px solid rgb(33, 33, 33);
+.tasks__button--remove:hover {
+    background:hsl(348, 83%, 52%)
+}
+
+.tasks__button--remove:active {
+    background:hsl(348, 83%, 52%)
+}
+
+.tasks__item--hidden {
+    display: none;
 }
